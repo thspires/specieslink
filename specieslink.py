@@ -16,7 +16,7 @@ def get_species_data_from_specieslink(species_name, file):
 	return r
 
 def write_kml(file="/Users/tiagopires/Desktop/temp.kml", dataframe):
-	''' Write KML file with distribution of the species from the dataframe loaded using get_species_data_from_specieslink() '''
+	''' Write KML file with sampling points coordinates of the species from the dataframe loaded using get_species_data_from_specieslink() '''
 	if not 'lon' in dataframe.columns:
 		'Precisa de colunas lat e lon que representam as coordenadas'
 	dataframe.dropna(subset=['lat','lon'], inplace=True) 
