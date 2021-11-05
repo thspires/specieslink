@@ -4,7 +4,7 @@ import pandas as pd
 def get_species_data_from_specieslink(species_name, file):
 	''' Returns pandas DataFrame with all information about the species from SpeciesLink'''
 	assert len(species_name) != 0, 'Must provide species name'
-	assert file != 0, 'Must provide destination csv file'
+	assert len(file) != 0, 'Must provide destination csv file'
 	endereco = 'https://api.splink.org.br/records/ScientificName/' + species_name + '/format/json'
 	r = requests.get(endereco)
 	assert r.status_code == 200, 'Connection to SpeciesLink failed'
